@@ -1,0 +1,644 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>React Technical Page</title>
+    <link rel="stylesheet" href="./style/main.css" />
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header>
+      <div class="logo__container">
+        <i class="bx bxl-react"></i>
+      </div>
+
+      <label class="searchbar__container" for="search-bar">
+        <i class="bx bx-search-alt"></i>
+        <input type="text" id="search-bar" placeholder="Search" />
+        <span>
+          <kbd>Ctrl</kbd>
+          <kbd>k</kbd>
+        </span>
+      </label>
+
+      <nav>
+        <ul>
+          <li><a href="#">Learn</a></li>
+          <li><a href="#">Reference</a></li>
+          <li><a href="#">Community</a></li>
+          <li><a href="#">Blog</a></li>
+          <li>
+            <button><i class="bx bx-sun"></i></button>
+          </li>
+          <li>
+            <a href="#">
+              <i class="bx bxl-github"></i>
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <div class="main__container">
+      <aside class="sidebar__container">
+        <nav>
+          <!--React@18.2.0-->
+          <ul>
+            <li>
+              <div class="nav__items">
+                <h4>react@18.2.0</h4>
+              </div>
+            </li>
+
+            <!--Hooks-->
+            <li>
+              <div class="nav__items">
+                <div class="nav__items--header">
+                  <h3>Hooks</h3>
+                  <button><i class="bx bx-chevron-down"></i></button>
+                </div>
+                <ul>
+                  <li><a href="#">useCallback</a></li>
+                  <li><a href="#">useContext</a></li>
+                  <li><a href="#">useDebugValue</a></li>
+                  <li><a href="#">useDeferredValue</a></li>
+                  <li><a href="#">useEffect</a></li>
+                  <li><a href="#">useId</a></li>
+                  <li><a href="#">useImperativeHandle</a></li>
+                  <li><a href="#">useInsertionEffect</a></li>
+                  <li><a href="#">useLayoutEffect</a></li>
+                  <li><a href="#">useMemo</a></li>
+                  <li><a href="#">useReducer</a></li>
+                  <li><a href="#">useRef</a></li>
+                  <li><a href="#">useState</a></li>
+                  <li><a href="#">useSyncExternalStore</a></li>
+                  <li><a href="#">useTransition</a></li>
+                </ul>
+              </div>
+            </li>
+
+            <!--Component-->
+            <li>
+              <div class="nav__items">
+                <div class="nav__items--header">
+                  <h3>Components</h3>
+                  <button><i class="bx bx-chevron-down"></i></button>
+                </div>
+                <ul>
+                  <li>
+                    <a href="#"> &lt;Fragment&gt;(&lt;&gt;) </a>
+                  </li>
+                  <li>
+                    <a href="#"> &lt;Provider&gt; </a>
+                  </li>
+                  <li>
+                    <a href="#"> &lt;StrictMode&gt; </a>
+                  </li>
+                  <li>
+                    <a href="#"> &lt;Suspense&gt; </a>
+                  </li>
+                </ul>
+              </div>
+            </li>
+
+            <!--API-->
+            <li>
+              <div class="nav__items">
+                <div class="nav__items--header">
+                  <h3>API</h3>
+                  <button><i class="bx bx-chevron-down"></i></button>
+                </div>
+                <ul>
+                  <li><a href="#">createContext</a></li>
+                  <li><a href="#">forwardRef</a></li>
+                  <li><a href="#">lazy</a></li>
+                  <li><a href="#">memo</a></li>
+                  <li><a href="#">startTransition</a></li>
+                </ul>
+              </div>
+            </li>
+          </ul>
+          <hr />
+          <!--React dom@18.2.0-->
+          <ul>
+            <li>
+              <div class="nav__items">
+                <h4>react@18.2.0</h4>
+              </div>
+            </li>
+            <!--Component-->
+            <li>
+              <div class="nav__items">
+                <div class="nav__items--header">
+                  <h3>Components</h3>
+                  <button><i class="bx bx-chevron-down"></i></button>
+                </div>
+                <ul>
+                  <li>
+                    <a href="#"> &lt;Common&gt;(eg &lt;div&gt;) </a>
+                  </li>
+                  <li>
+                    <a href="#"> &lt;input&gt; </a>
+                  </li>
+                  <li>
+                    <a href="#"> &lt;option&gt; </a>
+                  </li>
+                  <li>
+                    <a href="#"> &lt;progress&gt; </a>
+                  </li>
+                  <li>
+                    <a href="#"> &lt;select&gt; </a>
+                  </li>
+                  <li>
+                    <a href="#"> &lt;textarea&gt; </a>
+                  </li>
+                </ul>
+              </div>
+            </li>
+            <!--API-->
+            <li>
+              <div class="nav__items">
+                <div class="nav__items--header">
+                  <h3>APIs</h3>
+                  <button><i class="bx bx-chevron-down"></i></button>
+                </div>
+                <ul>
+                  <li>
+                    <a href="#"> createPortal </a>
+                  </li>
+                  <li>
+                    <a href="#"> flushSync </a>
+                  </li>
+                  <li>
+                    <a href="#"> findDOMNode </a>
+                  </li>
+                  <li>
+                    <a href="#"> hydrate </a>
+                  </li>
+                  <li>
+                    <a href="#"> render </a>
+                  </li>
+                  <li>
+                    <a href="#"> unmountComponentAtNode </a>
+                  </li>
+                </ul>
+              </div>
+            </li>
+
+            <!--Client APi-->
+            <li>
+              <div class="nav__items">
+                <div class="nav__items--header">
+                  <h3>Client APIs</h3>
+                  <button><i class="bx bx-chevron-down"></i></button>
+                </div>
+                <ul>
+                  <li>
+                    <a href="#"> createRoot </a>
+                  </li>
+                  <li>
+                    <a href="#"> hydrateRoot </a>
+                  </li>
+                </ul>
+              </div>
+            </li>
+
+            <!--Server APIs-->
+            <li>
+              <div class="nav__items">
+                <div class="nav__items--header">
+                  <h3>Server APIs</h3>
+                  <button><i class="bx bx-chevron-down"></i></button>
+                </div>
+                <ul>
+                  <li>
+                    <a href="#"> renderToNodeStream </a>
+                  </li>
+                  <li>
+                    <a href="#"> renderToPipeableStream </a>
+                  </li>
+                  <li>
+                    <a href="#"> renderToReadbleStream </a>
+                  </li>
+                  <li>
+                    <a href="#"> renderToStaticMarkup </a>
+                  </li>
+                  <li>
+                    <a href="#"> renderToStaticNodeStream </a>
+                  </li>
+                  <li>
+                    <a href="#"> renderToString </a>
+                  </li>
+                </ul>
+              </div>
+            </li>
+          </ul>
+
+          <hr />
+          <!--Legacy React APIS-->
+          <ul>
+            <li>
+              <div class="nav__items">
+                <h4>Legacy APIs</h4>
+              </div>
+            </li>
+
+            <!--API-->
+            <li>
+              <div class="nav__items">
+                <div class="nav__items--header">
+                  <h3>Legacy React APIs</h3>
+                  <button><i class="bx bx-chevron-down"></i></button>
+                </div>
+                <ul>
+                  <li>
+                    <a href="#"> Children </a>
+                  </li>
+                  <li>
+                    <a href="#"> cloneElement </a>
+                  </li>
+                  <li>
+                    <a href="#"> createFactory </a>
+                  </li>
+                  <li>
+                    <a href="#"> createRef </a>
+                  </li>
+                  <li>
+                    <a href="#"> isValidElement </a>
+                  </li>
+                  <li>
+                    <a href="#"> PureComponent </a>
+                  </li>
+                </ul>
+              </div>
+            </li>
+          </ul>
+        </nav>
+      </aside>
+
+      <main class="main__content" id="main-doc">
+        <article>
+          <header class="article-header">
+            <a href="#" class="sentence-emphasis"
+              >API Reference <i class="bx bx-chevron-right"></i
+            ></a>
+
+            <h1>Built-in React Hook</h1>
+            <p>
+              Hooks let you use different React features from your components.
+              You can either use the built-in Hooks or combine them to build
+              your own. This page lists all built-in Hooks in React
+            </p>
+          </header>
+
+          <section class="article__section main-section" id="section">
+            <header>
+              <h2>
+                State Hook
+                <a href="#"><i class="bx bx-link"></i></a>
+              </h2>
+            </header>
+            <p>
+              <em>State</em> lets a component
+              <a href="#">“remember” information like user input.</a>
+              For example, a form component can use state to store the input
+              value, while an image gallery component can use state to store the
+              selected image index.
+            </p>
+
+            <p>To add state to a component, use one of these Hooks:</p>
+
+            <ul>
+              <li>
+                <a href="#" class="word-emphasis">useState</a> declares a state
+                variable that you can update directly.
+              </li>
+              <li>
+                <a href="#" class="word-emphasis">useState</a> declares a state
+                variable that you can update directly.
+              </li>
+            </ul>
+
+            <code>
+              <div>function ImageGallery() {</div>
+              <div>const [index, setIndex] = useState(0);</div>
+              <div>// ...</div>
+            </code>
+          </section>
+
+          <!---Context-->
+          <section class="article__section main-section" id="section">
+            <header>
+              <h2>
+                Context Hook
+                <a href="#"><i class="bx bx-link"></i></a>
+              </h2>
+            </header>
+            <p>
+              <em>Context</em> lets a component
+              <a href="#" class="sentence-emphasis"
+                >receive information from distant parents without passing it as
+                props.</a
+              >
+              For example, your app’s top-level component can pass the current
+              UI theme to all components below, no matter how deep.
+            </p>
+
+            <ul>
+              <li>
+                <a href="#" class="word-emphasis">useContext</a> reads and
+                subscribes to a context.
+              </li>
+            </ul>
+
+            <code>
+              function Button() { const theme = useContext(ThemeContext); // ...
+            </code>
+          </section>
+
+          <!--Ref-->
+          <section class="article__section main-section" id="section">
+            <header>
+              <h2>
+                Ref Hooks
+                <a href="#"><i class="bx bx-link"></i></a>
+              </h2>
+            </header>
+            <p>
+              <em>Refs </em> let a component
+              <a href="#" class="sentence-emphasis">
+                hold some information that isn’t used for rendering, like a DOM
+                node or a timeout ID.</a
+              >
+              Unlike with state, updating a ref does not re-render your
+              component. Refs are an “escape hatch” from the React paradigm.
+              They are useful when you need to work with non-React systems, such
+              as the built-in browser APIs.
+            </p>
+
+            <ul>
+              <li>
+                <a href="#" class="word-emphasis">useRef</a> declares a ref. You
+                can hold any value in it, but most often it’s used to hold a DOM
+                node.
+              </li>
+              <li>
+                <a href="#" class="word-emphasis"> useImperativeHandle </a> lets
+                you customize the ref exposed by your component. This is rarely
+                used.
+              </li>
+            </ul>
+
+            <code>
+              function Form() { const inputRef = useRef(null); // ...
+            </code>
+          </section>
+
+          <!--Effect-->
+          <section class="article__section main-section" id="section">
+            <header>
+              <h2>
+                Effect Hooks
+                <a href="#"><i class="bx bx-link"></i></a>
+              </h2>
+            </header>
+            <p>
+              <em>Effects</em> let a
+              <a href="#" class="sentence-emphasis">
+                component connect to and synchronize with external systems.</a
+              >
+              This includes dealing with network, browser DOM, animations,
+              widgets written using a different UI library, and other non-React
+              code.
+            </p>
+
+            <code>
+              function ImageGallery() { const [index, setIndex] = useState(0);
+              // ...
+            </code>
+
+            <p>
+              Effects are an “escape hatch” from the React paradigm. Don’t use
+              Effects to orchestrate the data flow of your application. If
+              you’re not interacting with an external system,
+              <a href="#" class="sentence-emphasis">
+                you might not need an Effect.
+              </a>
+            </p>
+
+            <p>
+              There are two rarely used variations of
+              <a href="#" class="word-emphasis">useEffect</a> with differences
+              in timing:
+            </p>
+
+            <ul>
+              <li>
+                <a href="#" class="word-emphasis">useLayoutEffect</a> fires
+                before the browser repaints the screen. You can measure layout
+                here.
+              </li>
+              <li>
+                <a href="#" class="word-emphasis">useInsertionEffect</a> fires
+                before React makes changes to the DOM. Libraries can insert
+                dynamic CSS here.
+              </li>
+            </ul>
+          </section>
+
+          <!--Performance-->
+          <section class="article__section main-section" id="section">
+            <header>
+              <h2>
+                Performance Hooks
+                <a href="#"><i class="bx bx-link"></i></a>
+              </h2>
+            </header>
+            <p>
+              A common way to optimize re-rendering performance is to skip
+              unnecessary work. For example, you can tell React to reuse a
+              cached calculation or to skip a re-render if the data has not
+              changed since the previous render.
+            </p>
+
+            <!--List title-->
+            <p>
+              To skip calculations and unnecessary re-rendering, use one of
+              these Hooks:
+            </p>
+
+            <!--Un order list-->
+            <ul>
+              <li>
+                <a href="#" class="word-emphasis">useMemo</a> lets you cache the
+                result of an expensive calculation.
+              </li>
+              <li>
+                <a href="#" class="word-emphasis">useCallback</a> lets you cache
+                a function definition before passing it down to an optimized
+                component.
+              </li>
+            </ul>
+
+            <code>
+              function TodoList({ todos, tab, theme }) { const visibleTodos =
+              useMemo(() => filterTodos(todos, tab), [todos, tab]); // ... }
+            </code>
+
+            <p>
+              Sometimes, you can’t skip re-rendering because the screen actually
+              needs to update. In that case, you can improve performance by
+              separating blocking updates that must be synchronous (like typing
+              into an input) from non-blocking updates which don’t need to block
+              the user interface (like updating a chart).
+            </p>
+
+            <p>To prioritize rendering, use one of these Hooks:</p>
+
+            <ul>
+              <li>
+                <a href="#" class="word-emphasis">useTransition</a> lets you
+                mark a state transition as non-blocking and allow other updates
+                to interrupt it.
+              </li>
+
+              <li>
+                <a href="#" class="word-emphasis"> useDeferredValue </a> lets
+                you defer updating a non-critical part of the UI and let other
+                parts update first.
+              </li>
+            </ul>
+          </section>
+
+          <!--Other-->
+          <section class="article__section main-section" id="section">
+            <header>
+              <h2>
+                Other Hooks
+                <a href="#"><i class="bx bx-link"></i></a>
+              </h2>
+            </header>
+            <p>
+              These Hooks are mostly useful to library authors and aren’t
+              commonly used in the application code.
+            </p>
+
+            <ul>
+              <li>
+                <a href="#" class="word-emphasis">useDebugValue</a> lets you
+                customize the label React DevTools displays for your custom
+                Hook.
+              </li>
+              <li>
+                <a href="#" class="word-emphasis">useId</a> lets a component
+                associate a unique ID with itself. Typically used with
+                accessibility APIs.
+              </li>
+              <li>
+                <a href="#" class="word-emphasis">useSyncExternalStore</a> lets
+                a component subscribe to an external store.
+              </li>
+            </ul>
+          </section>
+
+          <!--Your Own-->
+          <section class="article__section main-section" id="section">
+            <header>
+              <h2>
+                Your own Hooks
+                <a href="#"><i class="bx bx-link"></i></a>
+              </h2>
+            </header>
+            <p>
+              You can also
+              <a href="#" class="sentence-emphasis"
+                >define your own custom Hooks</a
+              >
+              as JavaScript functions.
+            </p>
+          </section>
+
+          <section class="article__pagination">
+            <button></button>
+            <button>
+              <span>
+                <span>Next</span>
+                <a href="#" class="sentence-emphasis">useCallback</a></span
+              >
+              <i class="bx bx-chevron-right"></i>
+            </button>
+          </section>
+
+          <section class="article__feedback">
+            <form action="#">
+              <h4>How do you like there docs ?</h4>
+              <button>Take our survey</button>
+            </form>
+          </section>
+
+          <footer>
+            <div>
+              <div>
+                <a href="https://opensource.fb.com/" target="_blank">
+                  <i class="bx bxl-meta"></i>MetaOpenSource
+                </a>
+              </div>
+              <div>©2023</div>
+            </div>
+
+            <div class="invisible"></div>
+
+            <div>
+              <ul>
+                <h4><a href="#">Learn React</a></h4>
+                <li><a href="#">Quick Start</a></li>
+                <li><a href="#">Installation</a></li>
+                <li><a href="#">Describe the UI</a></li>
+                <li><a href="#">Adding Interactivity</a></li>
+                <li><a href="#">Managing State</a></li>
+                <li><a href="#">Escape Hatches</a></li>
+              </ul>
+            </div>
+            <div>
+              <ul>
+                <h4><a href="#">API Reference</a></h4>
+                <li>React APIs</li>
+                <li>React DOM APIs</li>
+              </ul>
+            </div>
+            <div>
+              <ul>
+                <h4><a href="#">Community</a></h4>
+                <li><a href="#">Code of Conduct</a></li>
+                <li><a href="#">Meet the Team</a></li>
+                <li>Docs Contributors</li>
+                <li>Acknowledgements</li>
+              </ul>
+            </div>
+            <div>
+              <ul>
+                <h4><a href="#">More</a></h4>
+                <li>Blog</li>
+                <li>React Native</li>
+                <li>Privacy</li>
+                <li>Terms</li>
+                <li>
+                  <i class="bx bxl-facebook-circle"></i>
+                  <i class="bx bxl-twitter"></i>
+                  <a href="#"><i class="bx bxl-github"></i></a>
+                </li>
+              </ul>
+            </div>
+          </footer>
+        </article>
+      </main>
+
+      <aside></aside>
+    </div>
+  </body>
+</html>
