@@ -1,0 +1,156 @@
+@import url("https://fonts.googleapis.com/css2?family=Inconsolata:wght@700&family=Space+Mono:wght@400;700&display=swap");
+
+:root {
+  ---background: #f5f5f5;
+  ---font-primary: #000000;
+
+  ---button-primary: #333333;
+  ---button-font-primary: #ffffff;
+
+  ---font-size-super: 64px;
+  ---font-size-primary: 43px;
+  ---font-size-secondary: 18px;
+  ---font-size-tertiary: 14px;
+}
+
+.dark-mode {
+  ---background: #1e1e1e;
+  ---font-primary: #ffffff;
+
+  ---button-primary: #ffffff;
+  ---button-font-primary: #000000;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a,
+button {
+  cursor: pointer;
+  font-family: inherit;
+  font: inherit;
+  color: var(--font-primary);
+}
+
+button {
+  border: none;
+  background: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  object-fit: cover;
+}
+
+body {
+  background: var(---background);
+  font-family: "Space Mono", monospace;
+  font-size: 1.2rem;
+  color: var(---font-primary);
+
+  display: grid;
+  grid-template-rows: 1fr auto 1fr;
+  min-height: 100vh;
+}
+
+header,
+main,
+footer {
+  padding: 20px 24px;
+}
+
+header {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header h1,
+header button {
+  font-size: 24px;
+}
+
+main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin-bottom: 64px;
+}
+
+main section:first-child {
+  max-width: 539.22px;
+  max-height: 447.43px;
+  margin-bottom: 60px;
+}
+
+main section:last-child h1 {
+  font-family: "Space Mono", monospace;
+  font-size: clamp(42, 56px, var(---font-size-primary));
+  font-weight: 700;
+  margin-bottom: 30px;
+}
+
+main section:last-child p {
+  font-size: var(---font-size-secondary);
+  margin-bottom: 66px;
+}
+
+main section:last-child a {
+  background: var(---button-primary);
+  color: var(---button-font-primary);
+  font-size: var(---font-size-tertiary);
+  font-weight: 700;
+  padding: 1rem;
+}
+
+footer {
+  opacity: 50%;
+  text-align: center;
+}
+
+@media (min-width: 1200px) {
+  header,
+  footer {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  header,
+  main {
+    align-items: flex-start;
+  }
+  main {
+    flex-direction: row;
+    gap: 118px;
+    margin: 0;
+  }
+
+  main section:first-child {
+    margin-bottom: 0;
+  }
+
+  main section:last-child > h1 {
+    font-size: var(---font-size-super);
+    margin-bottom: 36px;
+  }
+
+  main section:last-child > p {
+    min-width: clamp(300px, 381px, 500px);
+    font-size: var(---font-size-secondary);
+    margin-bottom: 64px;
+  }
+
+  footer {
+    justify-content: flex-end;
+    align-items: center;
+  }
+}

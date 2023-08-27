@@ -1,0 +1,470 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&display=swap");
+:root {
+  ---color-primary: #232730;
+  ---color-secondary: #333a45;
+  ---color-accent-dark: #16181d;
+  ---color-accent-cyan: #149eca;
+
+  ---background: #23272f;
+  ---background-code: #2f333c;
+  ---font-color: #f6f7f9;
+  ---font-color-secondary: #8d95a6;
+
+  --border-color: #23272f;
+  ---hover-main: #343a46;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(---background);
+  color: var(---font-color);
+  font-family: "Poppins", sans-serif;
+  font-size: 1rem;
+  font-weight: normal;
+  min-height: 100vh;
+
+  display: grid;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+header {
+  background: var(---color-primary);
+  position: sticky;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.75rem;
+
+  padding: 0.5rem 1rem;
+  z-index: 100;
+}
+
+header > .logo__container > i {
+  color: var(---color-accent-cyan);
+  font-size: 48px;
+}
+
+header > .searchbar__container {
+  background: var(---color-secondary);
+  cursor: pointer;
+  height: 40px;
+  flex: 1 1;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.5rem;
+
+  padding: 0.25rem 1rem;
+
+  border-radius: 100px;
+}
+
+header > .searchbar__container > i {
+  color: var(---font-color-secondary);
+  font-size: 1.2rem;
+}
+
+header > .searchbar__container > input {
+  background: inherit;
+  cursor: pointer;
+  font-size: 1rem;
+  width: 100%;
+  border: none;
+  outline: none;
+}
+
+header > .searchbar__container > span {
+  display: flex;
+  gap: 0.5rem;
+}
+
+header > .searchbar__container > span * {
+  background: var(---color-accent-dark);
+  opacity: 50%;
+  font-size: 12px;
+  padding: 0.3rem 0.5rem;
+
+  border-radius: 0.375rem;
+}
+
+header > nav > ul {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+header > nav > ul > li:nth-child(5),
+header > nav > ul > li:last-child {
+  width: 3rem;
+  height: 3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  padding: 0;
+  border-radius: 100%;
+}
+
+header > nav > ul > li:nth-child(5) > button,
+header > nav > ul > li:last-child > a > i {
+  cursor: pointer;
+  font-size: 24px;
+  color: inherit;
+  margin: auto;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: none;
+  border: none;
+  outline: none;
+}
+
+header > nav > ul > li {
+  cursor: pointer;
+  padding: 0.64rem 0.75rem;
+  border-radius: 100px;
+}
+
+hr {
+  border-bottom-width: 1px;
+  margin: 1rem;
+  border-color: var(--border-color);
+  opacity: 50%;
+}
+
+/* 
+Main Container */
+
+.main__container {
+  position: relative;
+  display: grid;
+  grid-template-columns: 20rem auto;
+}
+
+/* Sidebar  */
+.sidebar__container > nav {
+  position: fixed;
+  left: 0;
+  width: 20rem;
+  overflow-y: scroll;
+  height: calc(100vh - 5rem);
+}
+
+.sidebar__container > nav > ul {
+  margin-right: 1rem;
+}
+
+.sidebar__container nav::-webkit-scrollbar {
+  display: none;
+}
+
+.sidebar__container nav:hover::-webkit-scrollbar {
+  display: inline;
+  width: 8px;
+}
+
+.sidebar__container nav::-webkit-scrollbar-thumb {
+  border-radius: 100px;
+
+  background: #888;
+}
+
+/* Handle on hover */
+
+.nav__items ul li:last-child {
+  margin-bottom: 1rem;
+}
+
+.nav__items:first-child > h4,
+.nav__items > .nav__items--header,
+.nav__items > ul > li {
+  font-weight: normal;
+  padding: 0.7rem 1.2rem;
+}
+
+.nav__items:first-child > h4 {
+  font-size: 13px;
+  font-weight: 700;
+  color: gray;
+  border: 0;
+}
+
+.nav__items .nav__items--header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav__items .nav__items--header button {
+  cursor: pointer;
+  font-size: 1.5rem;
+  color: inherit;
+  background: none;
+  outline: none;
+  border: none;
+}
+
+.nav__items > ul > li,
+.nav__items > .nav__items--header {
+  color: var(---font-color);
+  font-size: 13px;
+  border-top-right-radius: 1rem;
+  border-bottom-right-radius: 1rem;
+}
+
+/* Main Content */
+
+/* Article */
+
+.main__content {
+  padding: 1rem 3rem;
+}
+
+.article-header {
+  background: inherit;
+  position: inherit;
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  gap: 1rem;
+
+  padding: 0;
+  padding-bottom: 1.5rem;
+  margin-bottom: 1.5rem;
+  border-bottom: 1px solid black;
+}
+
+.article-header > h1 {
+  font-size: 40px;
+  font-weight: 700;
+}
+
+.article-header > p {
+  font-size: 20px;
+  font-weight: bold;
+  line-height: 1.625;
+  letter-spacing: 0.5px;
+}
+
+.article__section {
+  width: 100%;
+
+  padding-bottom: 1.5rem;
+  margin-bottom: 1.5rem;
+  border-bottom: 2px solid var(---background-code);
+}
+
+.article__section > header {
+  padding: 0;
+  z-index: 0;
+}
+
+.article__section > h2 {
+  font-size: 28px;
+  margin: 1rem 0rem;
+}
+
+.article__section > p {
+  margin: 1rem 0rem;
+}
+
+.article__section > ul {
+  list-style: disc;
+  padding-left: 1rem;
+  margin-bottom: 1rem;
+}
+
+.article__section > ul > li {
+  margin-bottom: 0.5rem;
+}
+
+.sentence-emphasis,
+.word-emphasis {
+  color: var(---color-accent-cyan);
+}
+
+.word-emphasis {
+  background: var(---background-code);
+  padding: 0rem 0.5rem;
+  border-radius: 100px;
+}
+
+code {
+  display: block;
+  width: 100%;
+  background: var(---color-accent-dark);
+
+  padding: 2rem 2rem;
+  margin-bottom: 1rem;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-direction: column;
+  gap: 0.5rem;
+
+  border-radius: 20px;
+}
+
+.article__pagination {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  border-bottom: 2px solid var(---color-secondary);
+}
+
+.article__pagination button:last-child {
+  cursor: pointer;
+  width: 300px;
+  color: inherit;
+  background: none;
+
+  font-size: 1.1em;
+
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 1rem;
+
+  padding: 3rem 2rem;
+
+  border: none;
+  outline: none;
+}
+
+.article__pagination > button span {
+  display: flex;
+  align-items: flex-end;
+  flex-direction: column;
+  gap: 0.5rem;
+  flex-direction: column;
+}
+
+.article__feedback {
+  margin: 1rem 0rem;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 2rem;
+  border-bottom: 2px solid var(---color-secondary);
+}
+
+.article__feedback form button {
+  color: inherit;
+  font-size: 1rem;
+  font-weight: 700;
+  background-color: var(---color-accent-cyan);
+  margin: 0.5rem;
+  padding: 0.7rem 1rem;
+
+  border: none;
+  outline: none;
+  border-radius: 50px;
+}
+
+footer {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 1rem;
+  padding: 3rem 0;
+}
+
+footer div ul h4 {
+  margin-bottom: 1rem;
+}
+
+footer div ul li {
+  font-size: 15px;
+  font-family: 500;
+  margin-bottom: 0.5rem;
+}
+
+.invisible {
+  display: none;
+}
+
+header > nav > ul > li:hover,
+.nav__items > .nav__items--header:hover,
+.nav__items > ul > li:hover,
+.article__pagination button:hover {
+  cursor: pointer;
+  background: #343a46;
+}
+.article__pagination button:hover {
+  border-radius: 10px;
+}
+
+.article__pagination button:hover span a {
+  border-bottom: 2px solid var(---color-accent-cyan);
+}
+
+footer div ul li a:hover,
+footer div ul h4 a:hover {
+  padding-bottom: 0.4rem;
+  border-bottom: 1.5px solid var(---font-color);
+}
+
+@media (max-width: 741px) {
+  body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  .sidebar__container {
+    display: none;
+  }
+
+  header > .searchbar__container,
+  header > nav > ul > li {
+    display: none;
+  }
+
+  .main__content {
+    width: 375px;
+    padding: 1.5rem;
+  }
+
+  .article__pagination {
+    margin-bottom: 3rem;
+  }
+
+  .article__pagination button:last-child {
+    padding: 0rem;
+  }
+
+  footer {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 3rem;
+  }
+
+  .invisible {
+    display: block;
+  }
+}
