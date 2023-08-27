@@ -1,0 +1,282 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;700&family=Playfair+Display:ital,wght@0,500;0,600;0,700;0,800;1,400&display=swap");
+
+:root {
+  --background: white;
+
+  --primary: #f2994a;
+  --color-title: #333333;
+  --color-text: #4f4f4f;
+
+  --font-family-primary: "Montserrat", sans-serif;
+  --font-family-title: "Playfair Display", serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+h1,
+h2,
+h3 {
+  color: var(--color-title);
+  font-family: var(--font-family-title);
+  font-weight: 700;
+}
+
+img {
+  max-width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+body {
+  font-family: var(--font-family-primary);
+  font-size: 14px;
+  background-color: var(--background);
+  color: var(--color-text);
+
+  line-height: 1.5;
+
+  min-height: 100vh;
+  line-height: 1.5;
+}
+.recipe__article {
+  overflow: hidden;
+}
+
+.recipe__article {
+  max-width: 900px;
+  display: absolute;
+  inset: 0;
+  margin: auto;
+}
+
+.recipe__header {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 32px 12px;
+}
+
+.recipe__header h1 {
+  font-size: 24px;
+  font-family: var(--font-family-title);
+  font-weight: 700;
+}
+.recipe__header p {
+  font-style: italic;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 15px;
+}
+
+.recipe__header figure {
+  min-width: 300px;
+  overflow: hidden;
+}
+
+.recipe__header figure > figcaption {
+  font-style: italic;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 15px;
+
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 1rem;
+
+  margin-bottom: 1rem;
+}
+
+.fig-icon {
+  color: #c4c4c4;
+  width: 24px;
+  height: 24px;
+  transform: rotate(90deg);
+}
+
+main {
+  padding-inline: 1rem;
+  margin-bottom: 2rem;
+}
+
+.recipe__details--group {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.recipe__details--group .material-symbols-outlined {
+  font-size: 18px;
+}
+
+.recipe__details--group .content {
+  font-family: var(--font-family-primary);
+  font-weight: 500;
+
+  display: flex;
+  flex-direction: column;
+}
+
+.recipe__details--group .content h3 {
+  color: #bdbdbd;
+  font-size: 8px;
+  font-family: var(--font-family-primary);
+  font-weight: bolder;
+}
+
+.recipe__details--group .content span {
+  font-size: 10px;
+  font-weight: 500;
+  max-width: 62px;
+}
+
+.special {
+  color: var(--primary);
+  font-size: 12px;
+  font-family: var(--font-family-primary);
+  font-weight: 500;
+  margin-bottom: 1rem;
+}
+
+.recipe__details--duration {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+}
+
+.ingredients__section > h1 {
+  font-size: 18px;
+  margin-bottom: 13px;
+}
+
+.ingredient__list {
+  margin-bottom: 42px;
+}
+
+.ingredient__list h2 {
+  font-size: 1rem;
+  font-weight: 400;
+  font-style: italic;
+  line-height: 21px;
+
+  margin-bottom: 24px;
+}
+
+.ingredient__list > li {
+  display: grid;
+  grid-template-columns: 0.1fr auto;
+  align-items: flex-start;
+  gap: 0.5rem;
+  margin-bottom: 18px;
+}
+
+.ingredient__list li .checkbox-icon {
+  width: 21px;
+  height: 21px;
+}
+
+.instruction__section > h1 {
+  font-size: 24px;
+  line-height: 31px;
+  margin-bottom: 1rem;
+}
+
+.instruction__list {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.instruction__list > li {
+  display: grid;
+  grid-template-columns: 0.1fr auto;
+  align-items: flex-start;
+  gap: 1rem;
+}
+
+.instruction__list li > .numbering {
+  background: var(--primary);
+  color: var(--background);
+  width: 31px;
+  height: 31px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  border-radius: 3px;
+}
+
+.instruction__list li > p {
+  min-width: 300px;
+  color: black;
+  font-size: 1rem;
+  font-weight: 300;
+  line-height: 24px;
+}
+
+@media (width > 640px) {
+  .reverse__layout {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 1rem;
+  }
+
+  .recipe__details {
+    grid-column: 2;
+    display: flex;
+    align-items: flex-start;
+  }
+  .recipe__sections {
+    grid-row: 1; /* NEW */
+  }
+
+  .recipe__details--duration {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 42px;
+  }
+
+  .recipe__details:first-child {
+    width: 230px;
+    max-height: 350px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    padding: 2rem;
+
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+    border-radius: 12px;
+  }
+
+  .special {
+    width: 100%;
+    margin-bottom: 42px;
+  }
+
+  .recipe__details--group .material-symbols-outlined {
+    font-size: 32px;
+  }
+
+  .recipe__details--group .content {
+    font-family: var(--font-family-primary);
+    font-weight: 500;
+
+    display: flex;
+    flex-direction: column;
+  }
+
+  .recipe__details--group .content h3 {
+    font-size: 12px;
+  }
+
+  .recipe__details--group .content span {
+    font-size: none;
+  }
+}
