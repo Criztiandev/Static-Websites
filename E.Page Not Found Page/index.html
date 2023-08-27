@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>404 Page not Found</title>
+    <link rel="stylesheet" href="style.css" />
+
+    <link rel="icon" href="./images/devchallenges.png" />
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <header>
+      <h1>404 Not Found</h1>
+      <button>
+        <i class="bx bx-sun"></i>
+      </button>
+    </header>
+
+    <main>
+      <section>
+        <img src="./images/Scarecrow.png" alt="hero-image" />
+      </section>
+      <section>
+        <h1>I have bad news for you</h1>
+        <p>
+          The page you are looking for might be removed or is temporarily
+          unavailable
+        </p>
+
+        <a href="#">BACK TO HOMEPAGE</a>
+      </section>
+    </main>
+
+    <footer>
+      <small>created by:<a href="">criztiandev</a></small>
+    </footer>
+  </body>
+
+  <script>
+    const header = document.querySelector("header");
+    const modeBtn = header.lastElementChild;
+
+    modeBtn.addEventListener("click", () => {
+      document.body.classList.toggle("dark-mode");
+    });
+  </script>
+</html>
